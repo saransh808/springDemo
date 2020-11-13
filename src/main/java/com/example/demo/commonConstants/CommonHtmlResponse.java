@@ -1,4 +1,4 @@
-package commonConstants;
+package com.example.demo.commonConstants;
 
 public class CommonHtmlResponse {
 	public  static final String ROOT= "<!DOCTYPE html>\n"

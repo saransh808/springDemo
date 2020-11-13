@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import commonConstants.CommonHtmlResponse;
+import com.example.demo.commonConstants.CommonHtmlResponse;
 
 @RestController
 public class TestController {
