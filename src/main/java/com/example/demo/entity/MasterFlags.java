@@ -56,9 +56,9 @@ public class MasterFlags {
 
 	@Override
 	public String toString() {
+		
 		return "MasterFlags [flagId=" + flagId + ", flagName=" + flagName + ", flagDescripton=" + flagDescripton + "]\n";
 	}
-	
 	
 	public MasterFlags() {
 		super();
