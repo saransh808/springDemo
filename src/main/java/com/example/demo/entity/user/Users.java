@@ -1,6 +1,5 @@
 package com.example.demo.entity.user;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -17,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="MASTER_FLAGS", schema="sorion")
+@Table(name="USERS", schema="sorion")
 public class Users {
 
 	@Id
@@ -38,13 +37,13 @@ public class Users {
 	private String email;
 	
 	@Column(name="T_DATE_OF_BIRTH")
-	private LocalDate dateOfBirth;
+	private String dateOfBirth;
 	
-	@Column(name="I_LOGON_ADD")
-	private Integer logonAdd;
-	
-	@Column(name="I_LOGON_UPD")
-	private Integer logonUpd;
+//	@Column(name="I_LOGON_ADD")
+//	private Integer logonAdd;
+//	
+//	@Column(name="I_LOGON_UPD")
+//	private Integer logonUpd;
 	
 	@Column(name="T_TIMESTAMP_ADD")
 	private LocalDateTime timeStmpAdd;
