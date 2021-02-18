@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +17,7 @@ import com.example.demo.response.DbConstraints;
 
 @Service
 @Transactional
+//@CacheConfig(cacheNames="MasterFlagServiceCache")
 public class MasterFlagServiceImpl {
 
 	@Autowired
@@ -23,6 +26,7 @@ public class MasterFlagServiceImpl {
 	
 	DataExceptionMessages dataExceptionMessages;
 	DbConstraints dbConstraints;
+	
 	
 	public List<MasterFlags> findAll(){
 		return (List<MasterFlags>) masterFlagsRepository.findAll();

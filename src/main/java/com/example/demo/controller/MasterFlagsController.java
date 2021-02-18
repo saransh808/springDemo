@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import org.hibernate.annotations.Cache;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -27,6 +28,8 @@ public class MasterFlagsController {
 	@Autowired
 	private MasterFlagServiceImpl masterFlagServiceImpl;
 	
+
+//	@Cacheable(value = "flags")
 	@ApiOperation(value="Get All Flags")
 	@GetMapping("/get-all-flags")
 	public ResponseEntity<ApiResponseObject> getAllFlags() {
@@ -70,9 +73,6 @@ public class MasterFlagsController {
 			message = e.getMessage();
 			return new ResponseEntity<>(new ApiError(message), httpHeaders, status);
 		}
-		
-		
-		
 		
 	}
 	
