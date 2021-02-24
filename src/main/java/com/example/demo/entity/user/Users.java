@@ -50,4 +50,18 @@ public class Users {
 	
 	@Column(name="T_TIMESTAMP_UPD")
 	private LocalDateTime timeStmpUpd;
+	
+	
+	@Column(name="S_GENDER")
+	private Character gender;
+	
+	@Column(name="I_COUNTRY_STATE_REF")
+	private Integer countryStateRef;
+	
+	@Column(name="I_PROFESSION")
+	private Integer professionRef;
+	
+	
+	@Column(name="I_ROLE_REF")
+	private Integer roleRef;
 }

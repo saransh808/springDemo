@@ -34,6 +34,8 @@ public class UsersServiceImpl {
 	public final static Integer FLAG_PRIMARY_PHONE_NUMBER = 1;
 	public final static Integer FLAG_SECONDARY_PHONE_NUMBER = 2;
 	public final static Integer FLAG_COUNTRY = 3;
+	
+	public final static Integer USER_ROLE_DEFAULT = 0;
 
 	public String user(UserDetailsDTO userDetails) {
 
@@ -42,9 +44,14 @@ public class UsersServiceImpl {
 		user.setUserFirstName(userDetails.getUser().getUserFirstName());
 		user.setUserMiddleName(userDetails.getUser().getUserMiddleName());
 		user.setUserLastName(userDetails.getUser().getUserLastName());
-		user.setEmail(userDetails.getUser().getEmail());
+		user.setEmail(userDetails.getUser().getEmail().toLowerCase());
 		user.setDateOfBirth(userDetails.getUser().getDateOfBirth());
 		user.setTimeStmpAdd(LocalDateTime.now());
+		user.setCountryStateRef(userDetails.getUser().getCountryStateRef());
+		user.setGender(Character.toUpperCase(userDetails.getUser().getGender()));
+		user.setProfessionRef(userDetails.getUser().getProfessionRef());
+		user.setRoleRef(userDetails.getUser().getRoleRef()!=null?userDetails.getUser().getRoleRef():USER_ROLE_DEFAULT);
+		
 		usersRepository.save(user);
 
 		UserDetailsCarryDTO carryDTO = new UserDetailsCarryDTO();
