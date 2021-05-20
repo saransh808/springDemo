@@ -1,4 +1,4 @@
-package com.example.demo.controller.serviceImpl;
+package com.example.demo.serviceImpl;
 
 import org.springframework.stereotype.Service;
 
